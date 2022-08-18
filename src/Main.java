@@ -23,13 +23,11 @@ public class Main {
             if (j < MinPayment) {
                 MinPayment = j;
             }
-        }
-        System.out.println("Минимальная сумма трат за день составила " + MinPayment + " рублей.");
-        for (int j : arr) {
             if (j > MaxPayment) {
                 MaxPayment = j;
             }
         }
+        System.out.println("Минимальная сумма трат за день составила " + MinPayment + " рублей.");
         System.out.println("Максимальная сумма трат за день составила " + MaxPayment + " рублей.");
         System.out.println();
         //task3
@@ -38,7 +36,8 @@ public class Main {
         // месяц поделить на количество дней), и вывести в консоль результат в формате: «Средняя сумма трат за месяц
         // составила … рублей».
         double avrPayments = totalPayments * 1.0 / arr.length;
-        System.out.println("Средняя сумма трат за месяц составила " + avrPayments + " рублей.");
+        String str = String.format("Средняя сумма трат за месяц составила %.2f рублей.", avrPayments);
+        System.out.println(str);
         System.out.println();
         //task4
         //В нашей бухгалтерской книге появился баг. Что-то пошло нет так, и ФИО. сотрудников начали отображаться
